@@ -17,6 +17,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
       />
+      {post.frontmatter.drawerComponents.map(Drawer => <Drawer></Drawer>)}
       <article>
         <header>
           <h1
@@ -95,6 +96,7 @@ export const pageQuery = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         description
+        drawerComponents
       }
     }
   }
