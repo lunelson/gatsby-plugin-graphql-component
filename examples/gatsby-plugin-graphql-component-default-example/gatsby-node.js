@@ -125,11 +125,6 @@ exports.createResolvers = ({
               firstOnly: true
             })
 
-            // if (process.env.NODE_ENV !== `production`) {
-            //   const date = new Date()
-            //   await fs.utimes(__filename, date, date)
-            // }
-
             return node
               ? {
                   ___graphQLComponent: {
